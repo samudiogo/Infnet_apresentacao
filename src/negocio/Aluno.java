@@ -41,7 +41,8 @@ public class Aluno extends UsuarioBase {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Aluno [matricula=").append(matricula).append(",").append(super.toString()).append(", cr=")
+		builder.append("Aluno [matricula=").append(matricula).append(",")
+		.append(super.toString()).append(", cr=")
 				.append(cr).append("]");
 		return builder.toString();
 	}
