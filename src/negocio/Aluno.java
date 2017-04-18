@@ -1,8 +1,11 @@
 package negocio;
 
+import java.util.List;
+
 public class Aluno extends UsuarioBase {
 	private String matricula;
 	private int cr;
+	private List<Livro> livros;
 
 	public Aluno() {
 	}
@@ -32,6 +35,10 @@ public class Aluno extends UsuarioBase {
 		this.cr = cr;
 	}
 
+	public void setLivros(List<Livro> livroLista) {
+		livros = livroLista;
+	}
+
 	@Override
 	public void show() {
 		System.out.println(this.toString());
@@ -41,8 +48,10 @@ public class Aluno extends UsuarioBase {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Aluno [matricula=").append(matricula).append(",")
-		.append(super.toString()).append(", cr=")
+		builder.append("Aluno [matricula=").append(matricula)
+		.append(",").append(super.toString())
+		.append(",").append(livros.toString())
+		.append(", cr=")
 				.append(cr).append("]");
 		return builder.toString();
 	}
